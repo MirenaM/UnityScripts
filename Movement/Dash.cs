@@ -7,7 +7,7 @@ public class Dash : MonoBehaviour
     private Animator _Anim;
 
     [SerializeField]
-    private KeyCode _DashInput;
+    private KeyCode _DashInput = KeyCode.Space;
     private bool _IsDashing = false;
     [SerializeField]
     private bool _DashInAimDirection = false;
@@ -21,10 +21,10 @@ public class Dash : MonoBehaviour
     private float _StoppingDistance = 1f;
 
     [SerializeField]
-    private LayerMask _ObstacleLayers;
+    private LayerMask _ObstacleLayers = default;
 
-    private Vector3 _StartPos;
-    private Vector3 _EndPos;
+    private Vector3 _StartPos = default;
+    private Vector3 _EndPos = default;
 
     private void Awake()
     {
